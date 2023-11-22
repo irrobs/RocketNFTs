@@ -1,13 +1,14 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+  },
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.html$/,
+        use: ["html-loader"],
       },
       {
         test: /\.js$/,
@@ -27,9 +28,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Rocket NFTs",
-      filename: "index.html",
-      template: "src/template.html",
+      template: "./src/template.html",
     }),
   ],
 };

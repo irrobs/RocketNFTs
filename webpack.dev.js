@@ -7,8 +7,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "./assets/[name][ext]",
   },
   devServer: {
     static: {
@@ -19,5 +18,17 @@ module.exports = merge(common, {
     hot: true,
     compress: true,
     historyApiFallback: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader", //3. Inject styles into DOM
+          "css-loader", //2. Turns css into commonjs
+          "sass-loader", // 1. Turs sass into css
+        ],
+      },
+    ],
   },
 });

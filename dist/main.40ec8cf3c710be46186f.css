@@ -1,0 +1,2 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700);
+:root{--body-background: #0e0e0e;--color-logo: #ff5b50;--card-color: #252525;--text-color: #fff;--subtitle-color: #5a5757;--black-text: #000;--color-input: #0d0d0d}*{margin:0;padding:0;box-sizing:border-box}html{font-size:62.5%}body{background-color:var(--body-background);font-family:"Montserrat",sans-serif}h1{font-size:20rem;color:#fff}
