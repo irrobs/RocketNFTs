@@ -1,0 +1,22 @@
+@use "./variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Orbitron:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--body-background);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 20rem;
+  color: white;
+}
