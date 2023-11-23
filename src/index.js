@@ -1,6 +1,5 @@
 import "./styles/main.scss";
-import artista from "./assets/artista-1.png";
-
+import "./scripts/assets.js";
 const btn = document.querySelector(".btn");
 
 btn.addEventListener("click", () => console.log("funciona"));

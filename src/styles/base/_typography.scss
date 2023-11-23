@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.text {
+  &--red {
+    color: var(--color-logo);
+  }
+}
+.heading-primary {
+  font-size: 5rem;
+  font-weight: 700;
+}
