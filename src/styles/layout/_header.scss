@@ -1,11 +1,10 @@
 .header {
-  width: 130rem;
-  position: absolute;
+  grid-row: 1;
+  grid-column: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5rem 0;
-
   &__logo {
     font-size: 4rem;
     font-weight: 700;
