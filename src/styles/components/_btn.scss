@@ -1,0 +1,11 @@
+.btn {
+  &__header {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+}

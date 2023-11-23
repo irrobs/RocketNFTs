@@ -1,0 +1,24 @@
+.header {
+  width: 130rem;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 0;
+
+  &__logo {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  &__nav {
+    font-size: 1.8rem;
+    font-weight: 400;
+    display: flex;
+    gap: 8rem;
+    &-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

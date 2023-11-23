@@ -3,4 +3,6 @@
 @use "./base/global.scss";
 @use "./base/typography.scss";
 
+@use "./components/btn.scss";
+@use "./layout/header.scss";
 @use "./layout/hero.scss";
