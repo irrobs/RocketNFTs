@@ -14,12 +14,14 @@ html {
 }
 
 body {
+  overflow-x: hidden; //não sei oq está causando o overflow
   position: relative;
-  width: 100vw;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: min-content 1fr;
   grid-template-columns: 1fr 8rem minmax(min-content, 130rem) 8rem 1fr;
+  grid-template-rows: repeat(4, min-content);
+
+  background-color: var(--body-background);
 }
 
 .background-img {

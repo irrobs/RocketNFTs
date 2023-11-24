@@ -1,8 +1,13 @@
 @forward "./abstracts/variables.scss";
+@forward "./abstracts/mixins.scss";
 
 @use "./base/global.scss";
 @use "./base/typography.scss";
+@use "./base/utilities.scss";
 
 @use "./components/btn.scss";
+
 @use "./layout/header.scss";
 @use "./layout/hero.scss";
+@use "./layout/about.scss";
+@use "./layout/products.scss";
