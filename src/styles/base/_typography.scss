@@ -22,6 +22,10 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
 
+  &--medium {
+    font-size: 2rem;
+  }
+
   &--large {
     font-size: 5rem;
     font-weight: 500;

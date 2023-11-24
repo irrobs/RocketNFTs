@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.card {
+  max-width: 35rem;
+  background-color: var((--card-color));
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 1rem 2rem 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &__text-container {
+    text-align: start;
+  }
+  &__artist-photos {
+    font-size: 2rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover {
+    background-color: var(--color-logo);
+  }
+
+  &:hover &__artist-photos {
+    color: #fff;
+  }
+}

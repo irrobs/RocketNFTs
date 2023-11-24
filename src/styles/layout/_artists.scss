@@ -1,0 +1,25 @@
+.artists {
+  grid-column: 3;
+  grid-row: 5;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 10rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8rem;
+    margin-bottom: 10rem;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    img {
+      margin-left: 3rem;
+    }
+  }
+}

@@ -19,7 +19,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 8rem minmax(min-content, 130rem) 8rem 1fr;
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: repeat(5, min-content);
 
   background-color: var(--body-background);
 }
