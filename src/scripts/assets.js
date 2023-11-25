@@ -23,3 +23,7 @@ import artista5 from "../assets/artista-5.png";
 import artista6 from "../assets/artista-6.png";
 import arrowOrange from "../assets/arrow-orange.svg";
 import arrowBlack from "../assets/arrow-black.svg";
+import instagram from "../assets/instagram.svg";
+import youtube from "../assets/youtube.svg";
+import twitter from "../assets/twitter.svg";
+import email from "../assets/email.svg";
