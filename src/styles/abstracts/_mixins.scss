@@ -4,3 +4,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin flexRowEvenly {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

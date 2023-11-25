@@ -1,0 +1,117 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 6;
+  background-color: var(--card-color);
+  display: grid;
+  grid-template-columns: 1fr 8rem minmax(min-content, 130rem) 8rem 1fr;
+
+  &__container {
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  &__top {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 7rem 0;
+    border-bottom: 1px solid var(--subtitle-color);
+  }
+  &__bottom {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--subtitle-color);
+    padding: 5rem 0;
+  }
+
+  &__logo {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-right: auto;
+  }
+
+  &__button-up {
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--color-logo);
+    border: none;
+  }
+
+  &__cta {
+    padding: 8rem 8rem 8rem 0;
+    border-right: 1px solid var(--subtitle-color);
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    padding-right: 1rem;
+  }
+
+  &__textfield {
+    display: flex;
+
+    &-input {
+      padding: 2rem;
+      background-color: var(--color-input);
+      border: none;
+      font-size: 2rem;
+
+      ::placeholder {
+        color: var(--subtitle-color);
+      }
+    }
+
+    &-button {
+      border: none;
+      padding: 2rem 3rem;
+      background-color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+
+  &__links {
+    @include flexRowEvenly;
+  }
+
+  &__email {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--subtitle-color);
+    margin-right: auto;
+  }
+
+  &__socials {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+  }
+}
+
+.link-list {
+  list-style: none;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  span {
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__link {
+    color: var(--subtitle-color);
+  }
+}

@@ -21,3 +21,5 @@ import artista3 from "../assets/artista-3.png";
 import artista4 from "../assets/artista-4.png";
 import artista5 from "../assets/artista-5.png";
 import artista6 from "../assets/artista-6.png";
+import arrowOrange from "../assets/arrow-orange.svg";
+import arrowBlack from "../assets/arrow-black.svg";
