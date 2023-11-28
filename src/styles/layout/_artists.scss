@@ -16,7 +16,12 @@
   }
 
   &__link {
+    display: inline-block;
     text-decoration: none;
+    transition: all 0.3s linear;
+    &:hover {
+      scale: 1.1;
+    }
 
     img {
       margin-left: 3rem;

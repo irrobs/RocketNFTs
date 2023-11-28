@@ -39,6 +39,15 @@
       p {
         margin-bottom: 4rem;
       }
+
+      a {
+        display: inline-block;
+        transition: all 0.3s linear;
+      }
+
+      a:hover {
+        color: var(--color-logo);
+      }
     }
   }
 

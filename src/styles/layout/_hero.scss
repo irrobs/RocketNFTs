@@ -1,8 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .hero {
   grid-row: 2;
   grid-column: 3;
   &__content {
-    height: calc(100vh - 15.4rem);
+    min-height: calc(100vh - 15.4rem);
     display: grid;
     grid-template-rows: min-content 1fr;
     justify-content: center;
@@ -70,6 +73,11 @@
     &-item {
       border: 1px solid #fff;
       width: 100%;
+      transition: all 0.3s linear;
+
+      &:hover {
+        border: 1px solid var(--color-logo);
+      }
     }
   }
 }
