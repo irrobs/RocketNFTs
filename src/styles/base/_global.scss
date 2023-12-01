@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700");
 
 *,
@@ -12,6 +13,13 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include respond($tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond($phone) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -22,7 +30,14 @@ body {
   grid-template-columns: 1fr 8rem minmax(min-content, 130rem) 8rem 1fr;
   grid-template-rows: repeat(6, min-content);
 
-  background-color: var(--body-background);
+  background-color: $body-background;
+
+  @include respond($tab-port) {
+    grid-template-columns: 1fr 4rem minmax(min-content, 130rem) 4rem 1fr;
+  }
+  @include respond($phone-small) {
+    grid-template-columns: 1fr 1fr minmax(min-content, 130rem) 1fr 1fr;
+  }
 }
 
 .background-img {
@@ -30,4 +45,5 @@ body {
   z-index: -1;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }

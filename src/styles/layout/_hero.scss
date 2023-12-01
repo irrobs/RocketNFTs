@@ -4,11 +4,20 @@
 .hero {
   grid-row: 2;
   grid-column: 3;
+
+  @include respond($phone-small) {
+    padding: 0rem 1rem;
+  }
+
   &__content {
     min-height: calc(100vh - 15.4rem);
     display: grid;
     grid-template-rows: min-content 1fr;
     justify-content: center;
+
+    @include respond($tab-land--small) {
+      row-gap: 3rem;
+    }
   }
 
   &__text-box {
@@ -17,10 +26,26 @@
     grid-template-columns: 30% 1fr min-content;
     grid-template-rows: repeat(2, 1fr);
     column-gap: 5rem;
+
+    @include respond($tab-land--small) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 2rem;
+      column-gap: 0;
+    }
   }
 
   &__paragraph {
     padding-top: 1rem;
+
+    @include respond($medium-desktop) {
+      font-size: 2rem;
+    }
+
+    @include respond($tab-land--small) {
+      font-size: 1.6rem;
+      grid-row: 2;
+    }
   }
 
   &__avatars {
@@ -30,6 +55,10 @@
     gap: 1rem;
 
     padding-bottom: 1rem;
+
+    @include respond($tab-land--small) {
+      grid-row: 3;
+    }
   }
 
   &__avatars-img {
@@ -50,6 +79,12 @@
     grid-column: 2;
     grid-row: 1 / -1;
     padding-right: 2rem;
+
+    @include respond($tab-land--small) {
+      padding: 0;
+      grid-row: 1;
+      grid-column: 1;
+    }
   }
 
   &__logo {
@@ -58,6 +93,10 @@
     align-self: center;
 
     padding: 2rem 0;
+
+    @include respond($tab-land--small) {
+      display: none;
+    }
   }
 
   &__gallery {
@@ -70,13 +109,40 @@
     row-gap: 4rem;
     align-content: end;
 
+    @include respond($tab-land--small) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 1rem;
+    }
+    @include respond($tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
+      justify-items: center;
+    }
+
     &-item {
       border: 1px solid #fff;
-      width: 100%;
+      max-width: 100%;
       transition: all 0.3s linear;
 
+      @include respond($tab-port) {
+        max-width: 90%;
+      }
+      &--7,
+      &--8 {
+        @include respond($tab-land--small) {
+          display: none;
+        }
+      }
+
+      &--5,
+      &--6 {
+        @include respond($tab-port) {
+          display: none;
+        }
+      }
+
       &:hover {
-        border: 1px solid var(--color-logo);
+        border: 1px solid $color-logo;
       }
     }
   }

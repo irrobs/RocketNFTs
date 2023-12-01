@@ -4,15 +4,27 @@
 .footer {
   grid-column: 1 / -1;
   grid-row: 6;
-  background-color: var(--card-color);
+  background-color: $card-color;
   display: grid;
   grid-template-columns: 1fr 8rem minmax(min-content, 130rem) 8rem 1fr;
+
+  @include respond($tab-port) {
+    grid-template-columns: 1fr 4rem minmax(min-content, 130rem) 4rem 1fr;
+  }
+  @include respond($phone-small) {
+    grid-template-columns: 1fr 1fr minmax(min-content, 130rem) 1fr 1fr;
+  }
 
   &__container {
     grid-column: 3;
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: repeat(3, min-content);
+
+    @include respond($tab-port) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, min-content);
+    }
   }
 
   &__top {
@@ -21,34 +33,55 @@
     display: flex;
     align-items: center;
     padding: 7rem 0;
-    border-bottom: 1px solid var(--subtitle-color);
+    border-bottom: 1px solid $subtitle-color;
+
+    @include respond($phone-small) {
+      padding: 7rem 1rem;
+    }
   }
   &__bottom {
     grid-column: 1 / -1;
-    grid-row: 3;
+    grid-row: 4;
     display: flex;
     align-items: center;
-    border-top: 1px solid var(--subtitle-color);
+    border-top: 1px solid $subtitle-color;
     padding: 5rem 0;
+
+    @include respond($tab-port) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+    }
   }
 
   &__logo {
     font-size: 4rem;
     font-weight: 700;
     margin-right: auto;
+
+    @include respond($tab-port) {
+      text-align: center;
+    }
   }
 
   &__button-up {
     height: 8rem;
     width: 8rem;
-    background-color: var(--color-logo);
+    background-color: $color-logo;
     border: none;
     cursor: pointer;
   }
 
   &__cta {
     padding: 8rem 8rem 8rem 0;
-    border-right: 1px solid var(--subtitle-color);
+    border-right: 1px solid $subtitle-color;
+
+    @include respond($tab-port) {
+      border-right: none;
+      border-bottom: 1px solid $subtitle-color;
+      justify-self: center;
+      padding: 8rem;
+    }
   }
 
   &__heading {
@@ -56,20 +89,30 @@
     font-weight: 500;
     margin-bottom: 3rem;
     padding-right: 1rem;
+
+    @include respond($tab-port) {
+      text-align: center;
+      padding-right: 0;
+    }
   }
 
   &__textfield {
     display: flex;
 
+    @include respond($tab-port) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
     &-input {
       padding: 2rem;
-      background-color: var(--color-input);
+      background-color: $color-input;
       border: none;
       font-size: 2rem;
-      color: var(--color-logo);
+      color: $color-logo;
 
       ::placeholder {
-        color: var(--subtitle-color);
+        color: $subtitle-color;
       }
     }
 
@@ -85,13 +128,20 @@
 
   &__links {
     @include flexRowEvenly;
+
+    @include respond($tab-port) {
+      padding: 8rem 0;
+    }
   }
 
   &__email {
     font-size: 2rem;
     text-decoration: none;
-    color: var(--subtitle-color);
+    color: $subtitle-color;
     margin-right: auto;
+    @include respond($tab-port) {
+      margin-right: 0;
+    }
   }
 
   &__socials {
@@ -118,7 +168,7 @@
   }
 
   &__link {
-    color: var(--subtitle-color);
+    color: $subtitle-color;
     cursor: pointer;
     transition: all 0.3s linear;
 

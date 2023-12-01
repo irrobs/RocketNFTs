@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 @mixin flexColumnCenter {
   display: flex;
   flex-direction: column;
@@ -9,4 +11,16 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint != $big-desktop {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
 }

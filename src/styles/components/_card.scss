@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .card {
-  background-color: var((--card-color));
+  background-color: $card-color;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -17,10 +17,18 @@
     font-size: 2rem;
     margin-top: 1rem;
     transition: all 0.3s ease-out;
+
+    @include respond($medium-desktop) {
+      font-size: 1.6rem;
+    }
+
+    @include respond($tab-land--small) {
+      font-size: 2.4rem;
+    }
   }
 
   &:hover {
-    background-color: var(--color-logo);
+    background-color: $color-logo;
   }
 
   &:hover &__artist-photos {

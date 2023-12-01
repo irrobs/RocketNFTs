@@ -6,15 +6,31 @@
     <title>Rocket NFTs</title>
   </head>
   <body>
-    <img src="./assets/background.png" class="background-img" />
+    <picture>
+      <source
+        src="./assets/background-phone.png"
+        media="(max-width: 700px)"
+        class="background-img"
+      />
+      <img src="./assets/background.png" class="background-img" />
+    </picture>
+    <!-- <img src="./assets/background.png" class="background-img" /> -->
     <header class="header">
       <p class="header__logo">Rocket <span class="text--red">NFTs</span></p>
       <nav class="header__nav">
         <a href="#" class="header__nav-link">Comprar NFT</a
         ><a href="#" class="header__nav-link">Sobre</a
         ><a href="#" class="header__nav-link">FAQ</a>
+        <button class="btn btn__header btn__header--inside">
+          <img
+            src="./assets/logo_MetaMask.svg"
+            alt="Logo metamask"
+            class="btn__metamask-logo"
+          />
+          <p>Conectar carteira</p>
+        </button>
       </nav>
-      <button class="btn btn__header">
+      <button class="btn btn__header btn__header--outside">
         <img
           src="./assets/logo_MetaMask.svg"
           alt="Logo metamask"
@@ -22,6 +38,13 @@
         />
         <p>Conectar carteira</p>
       </button>
+      <div class="header__btn-mobile">
+        <div class="header__btn-mobile-icon header__btn-mobile-icon--open">
+          <div class="header__btn-mobile-icon--top"></div>
+          <div class="header__btn-mobile-icon--middle"></div>
+          <div class="header__btn-mobile-icon--bottom"></div>
+        </div>
+      </div>
     </header>
 
     <section class="hero">
@@ -69,19 +92,19 @@
           /><img
             src="./assets/galeria-5.png"
             alt=""
-            class="hero__gallery-item"
+            class="hero__gallery-item hero__gallery-item--5"
           /><img
             src="./assets/galeria-6.png"
             alt=""
-            class="hero__gallery-item"
+            class="hero__gallery-item hero__gallery-item--6"
           /><img
             src="./assets/galeria-7.png"
             alt=""
-            class="hero__gallery-item"
+            class="hero__gallery-item hero__gallery-item--7"
           /><img
             src="./assets/galeria-8.png"
             alt=""
-            class="hero__gallery-item"
+            class="hero__gallery-item hero__gallery-item--8"
           />
         </div>
       </div>
@@ -118,8 +141,6 @@
         src="./assets/banner.png"
         alt="Foto de um homem iluminado por luzes neon"
         class="about__img"
-        height="300"
-        width="100%"
       />
     </section>
 

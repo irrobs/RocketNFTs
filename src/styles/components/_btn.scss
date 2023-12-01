@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .btn {
   &__header {
     display: flex;
@@ -7,5 +10,20 @@
     gap: 1rem;
     padding: 1rem 2rem;
     cursor: pointer;
+
+    &--outside {
+      @include respond($tab-land--small) {
+        display: none;
+      }
+    }
+
+    &--inside {
+      display: none;
+      @include respond($tab-land--small) {
+        display: flex;
+        font-size: 3rem;
+        padding: 3rem 6rem;
+      }
+    }
   }
 }

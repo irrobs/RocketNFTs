@@ -1,9 +1,16 @@
-:root {
-  --body-background: #0e0e0e;
-  --color-logo: #ff5b50;
-  --card-color: #252525;
-  --text-color: #fff;
-  --subtitle-color: #5a5757;
-  --black-text: #000;
-  --color-input: #0d0d0d;
-}
+$body-background: #0e0e0e;
+$color-logo: #ff5b50;
+$card-color: #252525;
+$text-color: #fff;
+$subtitle-color: #5a5757;
+$black-text: #000;
+$color-input: #0d0d0d;
+
+/* Breakpoints */
+$phone-small: 25em;
+$phone: 43.75em;
+$tab-port: 56.25em;
+$tab-land--small: 65.625em;
+$tab-land: 75em;
+$medium-desktop: 81.25em;
+$big-desktop: 112.5em;
